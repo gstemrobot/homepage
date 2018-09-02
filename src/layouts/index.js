@@ -13,7 +13,7 @@ const App = props => {
             mode="horizontal"
             defaultSelectedKeys={["1"]}
             defaultOpenKeys={["1"]}
-            style={{ lineHeight: "64px" marginLeft: "200px" }}
+            style={{ lineHeight: "64px" }}
           >
             <Menu.Item key="1"><Link to="/">首页</Link></Menu.Item>
             <Menu.Item key="2"><Link to="/content">作品</Link></Menu.Item>
