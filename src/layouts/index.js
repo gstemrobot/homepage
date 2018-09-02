@@ -11,8 +11,9 @@ const App = props => {
           <Menu
             theme="dark"
             mode="horizontal"
-            defaultSelectedKeys={["2"]}
-            style={{ lineHeight: "64px" }}
+            defaultSelectedKeys={["1"]}
+            defaultOpenKeys={["1"]}
+            style={{ lineHeight: "64px" marginLeft: "200px" }}
           >
             <Menu.Item key="1"><Link to="/">首页</Link></Menu.Item>
             <Menu.Item key="2"><Link to="/content">作品</Link></Menu.Item>
