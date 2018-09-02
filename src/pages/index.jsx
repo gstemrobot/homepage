@@ -1,4 +1,5 @@
 // import { Rate } from 'antd';
+import styles from './index.less'
 const App = props => {
   const Head = () => {
     return (
