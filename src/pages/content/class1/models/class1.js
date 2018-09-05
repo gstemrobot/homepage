@@ -1,4 +1,4 @@
-import * as pageService from '../services/example'
+import * as pageService from '../services/class1'
 export default {
   namespace: 'example1',
   state: {

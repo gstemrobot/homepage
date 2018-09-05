@@ -1,7 +1,7 @@
 
-import * as exampleService from '../services/example'
+// import * as exampleService from '../services/example'
 export default {
-    namespace: 'example',
+    namespace: 'content',
     state: {
         text: 'page work',
         list: []
@@ -20,29 +20,31 @@ export default {
     effects: {
         *fetch({ payload }, { call, put }) {
             yield put({
-                type: 'save', payload: {
+                type: 'save', 
+                payload: {
                         text: 'page init'
                     }
             });
         },
         *delete({ payload }, { call, put }) {
             yield put({
-                type: 'save', payload: {
-                        list: []
+                type: 'save', 
+                payload: {
+                    list: []
                 }
             });
         },
-        *update({ payload }, { call, put, select }) {
-            const data = yield call(exampleService.query, payload);
-            if (data) {
-                yield put({
-                    type: 'save',
-                    payload: {
-                        list: data.data
-                    },
-                })
-            }
-        }
+        // *update({ payload }, { call, put, select }) {
+        //     const data = yield call(exampleService.query, payload);
+        //     if (data) {
+        //         yield put({
+        //             type: 'save',
+        //             payload: {
+        //                 list: data.data
+        //             },
+        //         })
+        //     }
+        // }
     },
     reducers: {
         save(state, action) {
