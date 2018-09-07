@@ -6,6 +6,7 @@
     "lint": "eslint --ext .js src test"
   },
   "dependencies": {
+    "antd-mobile": "^2.2.4",
     "umi": "*",
     "umi-plugin-dva": "*",
     "umi-plugin-routes": "*"

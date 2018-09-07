@@ -2,23 +2,10 @@ import { connect } from 'dva';
 import { Timeline } from 'antd';
 import styles from './page.less';
 
-function App({example1,dispatch}) {
-  const {list,text} = example1;
-  const exampleData = {
-    list:list,
-    handleClick:() => {
-      dispatch({
-        type: 'example1/delete',
-        payload: {
-        },
-      })
-    }
-  }
+function App({dispatch}) {
   return (
     <div className={styles.normal}>
-      <h2>
-        {text}
-      </h2>
+      <h2>1班哈利魔法课</h2>
       <Timeline mode="alternate">
         <Timeline.Item>
           <h4>2018-07-15 魔法科学课</h4>
@@ -33,4 +20,6 @@ function App({example1,dispatch}) {
   );
 }
 
-export default connect(({example1})=>({example1}))(App)
+export default connect((state) => {
+  return state;
+})(App)

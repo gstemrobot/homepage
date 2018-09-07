@@ -1,25 +1,11 @@
 import { connect } from 'dva';
 import { Timeline } from 'antd';
 import styles from './page.less';
-import Example from './components/Example';
 
-function App({example1,dispatch}) {
-  const {list,text} = example1;
-  const exampleData = {
-    list:list,
-    handleClick:() => {
-      dispatch({
-        type: 'example1/delete',
-        payload: {
-        },
-      })
-    }
-  }
+function App({dispatch}) {
   return (
     <div className={styles.normal}>
-      <h2>
-        {text}
-      </h2>
+      <h2>机器人</h2>
       <Timeline mode="alternate">
         <Timeline.Item>
           <h4>2018-09-03 机器人课</h4>
@@ -44,7 +30,6 @@ function App({example1,dispatch}) {
           <img alt="example" src="https://thumbnail0.baidupcs.com/thumbnail/a29aa52a8697ee7ec9d1f4c8985ab4c2?fid=2685614332-250528-404254520970804&time=1536127200&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-2qRmTXOlGfsJWe3kBiJU0yu%2FwSc%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=5742164228691966786&dp-callid=0&size=c710_u400&quality=100&vuk=-&ft=video" />
         </Timeline.Item>
       </Timeline>
-      <Example {...exampleData}/>
     </div>
   );
 }

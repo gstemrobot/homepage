@@ -1,5 +1,7 @@
-import { List, Avatar } from 'antd';
+import { List, Avatar, Layout } from 'antd';
 import Link from 'umi/link';
+
+const { Content } = Layout;
 
 const App = props => {
   const data = [
@@ -16,22 +18,25 @@ const App = props => {
   ];
   return (
     <div>
-      <List
-        itemLayout="horizontal"
-        dataSource={data}
-        renderItem={item => (
-          <List.Item>
-            <List.Item.Meta
-              avatar={
-                <Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
-              }
-              title={<Link to={item.link}>{item.title}</Link>}
-              description={item.description}
-            />
-            
-          </List.Item>
-        )}
-      />
+      <Content style={{ padding: "50px" }}>
+        <List
+          style={{ padding: "50px" }}
+          itemLayout="horizontal"
+          dataSource={data}
+          renderItem={item => (
+            <List.Item>
+              <List.Item.Meta
+                avatar={
+                  <Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
+                }
+                title={<Link to={item.link}>{item.title}</Link>}
+                description={item.description}
+              />
+              
+            </List.Item>
+          )}
+        />
+      </Content>
     </div>
   );
 };
