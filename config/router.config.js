@@ -24,6 +24,12 @@ export default [
         name: 'head',
         component: './Head/Home',
       },
+      // course
+      {
+        path: '/course',
+        name: 'course',
+        component: './About/Page',
+      },
       // content
       {
         path: '/content',
@@ -48,16 +54,27 @@ export default [
           },
         ],
       },
+      // news
+      {
+        path: '/news',
+        name: 'news',
+        component: './About/Page',
+      },
       // about
       {
         path: '/about',
         name: 'about',
         component: './About/Page',
       },
+      // blog
+      {
+        path: '/blog',
+        name: 'blog',
+        redirect: 'https://blog.918.zone',
+      },
       // dashboard
       {
         path: '/dashboard',
-        name: 'dashboard',
         icon: 'dashboard',
         routes: [
           {
@@ -81,7 +98,6 @@ export default [
       {
         path: '/form',
         icon: 'form',
-        name: 'form',
         routes: [
           {
             path: '/form/basic-form',
@@ -128,7 +144,6 @@ export default [
       {
         path: '/list',
         icon: 'table',
-        name: 'list',
         routes: [
           {
             path: '/list/table-list',
@@ -175,7 +190,6 @@ export default [
       },
       {
         path: '/profile',
-        name: 'profile',
         icon: 'profile',
         routes: [
           // profile
@@ -193,7 +207,6 @@ export default [
         ],
       },
       {
-        name: 'result',
         icon: 'check-circle-o',
         path: '/result',
         routes: [
@@ -207,7 +220,6 @@ export default [
         ],
       },
       {
-        name: 'exception',
         icon: 'warning',
         path: '/exception',
         routes: [
@@ -236,7 +248,6 @@ export default [
         ],
       },
       {
-        name: 'account',
         icon: 'user',
         path: '/account',
         routes: [
