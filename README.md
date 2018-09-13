@@ -1,77 +1,105 @@
-# DVA-UMI
-1.0版本
-<img src="./src/assets/a.png"/>
-## 版本更新
-### 2018.03.24
-- 1.更新umi1.1.1
-- 2.增加嵌套路由demo
-## 开发构建
+English | [简体中文](./README.zh-CN.md) | [Русский](./README.ru-RU.md)
 
-### 目录结构
+<h1 align="center">Ant Design Pro</h1>
 
-```bash
-├── /mock/           # 数据mock
-├── /dist/           # 项目输出目录
-├── /src/            # 项目源码目录
-│ ├── /assets/       # 公共文件，编译时copy至dist目录
-│ ├── /components/   # UI组件及UI相关方法
-│ │ ├── skin.less    # 全局样式
-│ │ └── vars.less    # 全局样式变量
-│ ├── /pages/        # 页面
-│ │ └── /user/       # 路由
-│ │   ├── /components/ #私有组件     
-│ │   ├── /models/     #私有模型(按需加载) 
-│ │   ├── /services/   #私有服务(按需加载)   
-│ │   ├── page.js       
-│ │   └── page.less   
-│ ├── /models/       # 全局数据模型(默认加载)
-│ ├── /services/     # 数据接口
-│ ├── /themes/       # 项目样式
-│ ├── /utils/        # 工具函数
-│ │ ├── config.js    # 项目常规配置
-│ │ ├── menu.js      # 菜单及面包屑配置
-│ │ ├── config.js    # 项目常规配置
-│ │ ├── request.js   # 异步请求函数
-│ │ └── theme.js     # 项目需要在js中使用到样式变量
-│ ├── route.js       # 路由配置
-│ ├── index.js       # 入口文件
-│ └── global.css(.less) #全局样式文件     
-├── package.json     # 项目信息
-├── .eslintrc        # Eslint配置
+<div align="center">
+
+An out-of-box UI solution for enterprise applications as a React boilerplate.
+
+[![CircleCI Status](https://circleci.com/gh/ant-design/ant-design-pro.svg?style=svg)](https://circleci.com/gh/ant-design/ant-design-pro/)
+[![Build status](https://ci.appveyor.com/api/projects/status/67fxu2by3ibvqtat/branch/master?svg=true)](https://ci.appveyor.com/project/afc163/ant-design-pro/branch/master)
+[![Dependencies](https://img.shields.io/david/ant-design/ant-design-pro.svg)](https://david-dm.org/ant-design/ant-design-pro)
+[![DevDependencies](https://img.shields.io/david/dev/ant-design/ant-design-pro.svg)](https://david-dm.org/ant-design/ant-design-pro?type=dev)
+[![Gitter](https://badges.gitter.im/ant-design/ant-design-pro.svg)](https://gitter.im/ant-design/ant-design-pro?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+
+![](https://user-images.githubusercontent.com/8186664/44953195-581e3d80-aec4-11e8-8dcb-54b9db38ec11.png)
+
+</div>
+
+- Preview: http://preview.pro.ant.design
+- Home Page: http://pro.ant.design
+- Documentation: http://pro.ant.design/docs/getting-started
+- ChangeLog: http://pro.ant.design/docs/changelog
+- FAQ: http://pro.ant.design/docs/faq
+- Mirror Site in China: http://ant-design-pro.gitee.io
+
+## 2.0 Released Now! 🎉🎉🎉
+[Announcing Ant Design Pro 2.0.0](https://medium.com/ant-design/beautiful-and-powerful-ant-design-pro-2-0-release-51358da5af95)
+
+## Translation Recruitment :loudspeaker:
+
+We need your help: https://github.com/ant-design/ant-design-pro/issues/120
+
+## Features
+
+- :gem: **Neat Design**: Follow [Ant Design specification](http://ant.design/)
+- :triangular_ruler: **Common Templates**: Typical templates for enterprise applications
+- :rocket: **State of The Art Development**: Newest development stack of React/umi/dva/antd
+- :iphone: **Responsive**: Designed for variable screen sizes
+- :art: **Theming**: Customizable theme with simple config
+- :globe_with_meridians: **International**: Built-in i18n solution
+- :gear: **Best Practices**: Solid workflow to make your code healthy
+- :1234: **Mock development**: Easy to use mock development solution
+- :white_check_mark: **UI Test**: Fly safely with unit and e2e tests
+
+## Templates
+
 ```
-### 模型规则(未实现)
-1. src/models/**/*.js 为 global model
-2. src/pages/**/models/**/*.js 为 page model
-3. global model 全量载入，page model 在 production 时按需载入，在 development 时全量载入
-4. page model 为 page js 所在路径下 models/**/*.js 的文件
-5. page model 要向上查找，比如 page js 为 pages/a/b.js，他的 page model 为 pages/a/b/models/**/*.js + pages/a/models/**/*.js，依次类推
-6. 约定 model.js 为单文件 model，解决只有一个 model 时不需要建 models 目录的问题，有 model.js 则不去找 models/**/*.js
-7. maybe: 支持合并 model 和 component 的请求，避免文件过于细碎
-### 快速开始
-
-克隆项目文件:
+- Dashboard
+  - Analytic
+  - Monitor
+  - Workspace
+- Form
+  - Basic Form
+  - Step Form
+  - Advanced From
+- List
+  - Standard Table
+  - Standard List
+  - Card List
+  - Search List (Project/Applications/Article)
+- Profile
+  - Simple Profile
+  - Advanced Profile
+- Account
+  - Account Center
+  - Account Settings
+- Result
+  - Success
+  - Failed
+- Exception
+  - 403
+  - 404
+  - 500
+- User
+  - Login
+  - Register
+  - Register Result
+```
 
 ## Usage
 
 ```bash
-$ git clone https://github.com/xiaohuoni/dva-umi.git
-$ cd dva-umi
+$ git clone https://github.com/ant-design/ant-design-pro.git --depth=1
+$ cd ant-design-pro
 $ npm install
 $ npm start         # visit http://localhost:8000
 ```
 
-Or you can use the command tool: [oni-cli](https://github.com/xiaohuoni/oni-cli)
+More instructions at [documentation](http://pro.ant.design/docs/getting-started).
 
-```bash
-$ npm install oni-cli -g
-$ oni new myapp
-$ cd myapp
-$ npm install
-$ npm start         # visit http://localhost:8000
-```
+## Browsers support
 
-Build.
+Modern browsers and IE11.
 
-```bash
-$ npm run build
-```
+| [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="IE / Edge" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>IE / Edge | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Firefox | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Safari | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/opera/opera_48x48.png" alt="Opera" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Opera |
+| --------- | --------- | --------- | --------- | --------- |
+| IE11, Edge| last 2 versions| last 2 versions| last 2 versions| last 2 versions
+
+## Contributing
+
+Any type of contribution is welcome, here are some examples of how you may contribute to this project:
+
+- Use Ant Design Pro in your daily work.
+- Submit [issues](http://github.com/ant-design/ant-design-pro/issues) to report bugs or ask questions.
+- Propose [pull requests](http://github.com/ant-design/ant-design-pro/pulls) to improve our code.
