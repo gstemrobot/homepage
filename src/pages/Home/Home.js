@@ -1,20 +1,40 @@
 import React, { PureComponent } from 'react';
-import { Card } from 'antd';
+import { Card, Carousel } from 'antd';
 import { connect } from 'dva';
 import PageHeaderWrapper from '@/components/PageHeaderWrapper';
-// import styles from './index.css'
+import styles from './Home.less';
 
-const { Meta } = Card;
+// const { Meta } = Card;
 
 @connect(({ loading }) => ({
   submitting: loading.effects['form/submitAdvancedForm'],
 }))
 class Home extends PureComponent {
   render() {
+    const onChange = (a, b, c) => {
+      console.log(a, b, c);
+    };
     return (
       <PageHeaderWrapper title="首页">
         <Card bordered={false}>
-          <img
+          <div>
+            <Carousel afterChange={onChange}>
+              <div className={styles.slickSlide}>
+                <h3>1</h3>
+              </div>
+              <div>
+                <h3>2</h3>
+              </div>
+              <div>
+                <h3>3</h3>
+              </div>
+              <div>
+                <h3>4</h3>
+              </div>
+            </Carousel>
+          </div>
+
+          {/* <img
             alt="key1"
             src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
           />
@@ -35,7 +55,7 @@ class Home extends PureComponent {
             }
           >
             <Meta title="Europe Street beat" description="www.instagram.com" />
-          </Card>
+          </Card> */}
         </Card>
       </PageHeaderWrapper>
     );

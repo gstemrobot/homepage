@@ -17,39 +17,38 @@ export default [
     Routes: ['src/pages/Authorized'],
     authority: ['admin', 'user'],
     routes: [
-      { path: '/', redirect: '/dashboard/analysis' },
+      { path: '/', redirect: '/home' },
       // home
       {
-        path: '/head',
-        name: 'head',
-        component: './Head/Home',
+        path: '/home',
+        name: 'home',
+        icon: 'home',
+        component: './Home/Home',
       },
       // course
       {
         path: '/course',
         name: 'course',
-        component: './About/Page',
+        component: './Course/Page',
       },
       // content
       {
         path: '/content',
         name: 'content',
-        component: './Content/Center',
         routes: [
           {
-            path: '/content',
-            redirect: '/content/articles',
-          },
-          {
-            path: '/content/articles',
+            path: '/content/elementary',
+            name: 'elementary',
             component: './Content/Articles',
           },
           {
-            path: '/content/applications',
+            path: '/content/intermediate',
+            name: 'intermediate',
             component: './Content/Applications',
           },
           {
-            path: '/content/projects',
+            path: '/content/high-grade',
+            name: 'high-grade',
             component: './Content/Projects',
           },
         ],
@@ -58,7 +57,7 @@ export default [
       {
         path: '/news',
         name: 'news',
-        component: './About/Page',
+        component: './News/Page',
       },
       // about
       {
@@ -66,13 +65,6 @@ export default [
         name: 'about',
         component: './About/Page',
       },
-      // blog
-      {
-        path: '/blog',
-        name: 'blog',
-        redirect: 'https://blog.918.zone',
-      },
-      // dashboard
       {
         path: '/dashboard',
         icon: 'dashboard',

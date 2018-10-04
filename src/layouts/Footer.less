@@ -1,0 +1,21 @@
+@import '~antd/lib/style/themes/default.less';
+
+.fixedHeader {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  // > @zindex-tooltip
+  z-index: 1061;
+  transition: width 0.2s;
+}
+
+.footerbg {
+  margin: 0;
+  padding: 0;
+  background-color: @layout-header-background;
+  color: @heading-color;
+
+  .jianjie {
+    color: white;
+  }
+}
